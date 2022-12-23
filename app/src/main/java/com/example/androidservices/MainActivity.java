@@ -6,6 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+
+/*
+* Services Demo containing start and stop service
+* */
 public class MainActivity extends AppCompatActivity {
 
     private Intent intent;
@@ -19,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //method called on StartService button click
     public void startService(View view) {
-        startService(intent);
+        startService(intent); //command to start service
     }
 }

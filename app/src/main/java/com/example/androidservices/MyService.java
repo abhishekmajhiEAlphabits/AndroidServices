@@ -7,6 +7,10 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
+
+/*
+* MyService class containing the Service class lifecycle methods
+* */
 public class MyService extends Service {
 
 
@@ -21,10 +25,15 @@ public class MyService extends Service {
         Log.i("TAG","Service stopped");
     }
 
+    //method called when startService() function invoked from MainActivity and contains the tasks which we can perform using services
     public int onStartCommand(Intent intent, int flags, int startId) {
+
+        //all the tasks which is to be performed in service is put here
+
         Log.d("TAG","Service Started");
 
-        stopSelf();
+        stopSelf(); //command to self stop service after all the tasks are done
+
         return super.onStartCommand(intent, flags, startId);
     }
 }
